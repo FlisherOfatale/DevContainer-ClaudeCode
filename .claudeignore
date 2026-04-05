@@ -1,0 +1,50 @@
+# .claudeignore — Files Claude Code should not read
+# Syntax mirrors .gitignore
+
+# Secrets & credentials (never let Claude read these)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*credential*
+
+# Build artifacts & dependencies (keep context window lean)
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Lock files (large, rarely useful for Claude)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+poetry.lock
+Pipfile.lock
+Gemfile.lock
+
+# Generated / binary files
+*.min.js
+*.min.css
+*.map
+*.wasm
+*.sqlite
+*.db
+
+# Logs
+*.log
+logs/
+
+# IDE & OS noise
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
