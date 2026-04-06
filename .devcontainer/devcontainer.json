@@ -1,10 +1,23 @@
 {
-  "name": "Claude Code",
+  "name": "Claude Code Nodespace Dev Container",
   "build": { "dockerfile": "Dockerfile" },
+
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    }
+  },
 
   "customizations": {
     "vscode": {
-      "extensions": ["Anthropic.claude-code"]
+      "extensions": [
+        "Anthropic.claude-code",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "aquasecurity.trivy-vscode"
+      ]
     }
   },
 
